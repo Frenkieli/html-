@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html{
+      /* position: relative; */
+    }
+    body{
+      /* background-color: #aaa; */
+      /* position: relative; */
+      height: 300vh;
+    }
+    .e{
+      /* border: 3px solid #f00; */
+      width: 100%;
+      margin: auto;
+      padding: 20px;
+      padding-top: 80px;
+      box-sizing: border-box;
+    }
+    .a{
+      width: 1000px;
+      position: relative;
+      background-color: #ccc;
+      padding-top: 50px;
+    }
+    .b{
+      width: 800px;
+      /* position: relative; */
+    }
+    .c{
+      width: 600px;
+      /* position: relative; */
+    }
+    .d{
+      width: 400px;
+      position: relative;
+      /* left: -0%; */
+      background-color: #a00;
+      animation: mousmove 2s infinite alternate;
+    }
+    @keyframes mousmove {
+      0%{
+        height: 200px;
+      }
+      100%{
+        height: 300px;
+      }
+    }
+    .box{
+      height: 50px;
+      width: 80px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0px;
+      clip-path: polygon(50% 0%,100% 100%,0% 100%);
+    }
+    .boxa{
+      left: 10px;
+    }
+    .boxb{
+      right: 10px;
+    }
+    .boxc,.boxd{
+      transform: rotate(180deg);
+    }
+    .boxc{
+      top: 0;
+      left: 80px;
+    }
+    .boxd{
+      top: 0;
+      right: 80px;
+    }
+    .eyes{
+      position: absolute;
+      top: 60px;
+      width: 80px;
+      height: 80px;
+      background-color: #000;
+      border-radius: 50%;
+    }
+    .eyes::after{
+      width: 120px;
+      height: 120px;
+      background-color: #fff;
+      border-radius: 50%;
+      clip-path: polygon(75% 0% ,50% 50% ,100% 25%);
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      /* animation: eyesmove 2s ease-in-out infinite; */
+    }
+    .eyesb::after{
+      animation-delay: 1s;
+    }
+    @keyframes eyesmove {
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    .eyesa{
+      right: 150px;
+    }
+    .eyesb{
+      left: 150px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="a e">
+    <div class="eyes eyesa"></div>
+    <div class="eyes eyesb"></div>
+    <div class="b e">
+      <div class="c e">
+        <div class="d e">
+          <div class="box boxa"></div>
+          <div class="box boxb"></div>
+          <div class="box boxc"></div>
+          <div class="box boxd"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>
+    為什麼動畫在動的時候會有1px誤差??
+    <br>
+    <br>
+    是因為渲染過程父層在動,而後子層才跟上這樣?
+    <br>
+    <br>
+    只能讓他超出1px然後overflow: hidden;嗎?
+  </h1>
+</body>
+</html>
