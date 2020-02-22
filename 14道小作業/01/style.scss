@@ -1,0 +1,107 @@
+.section{
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  background-color: #2B3238;
+  padding: 50px 0;
+  .item{
+    width: 50%;
+    float: left;
+    position: relative;
+    padding-top: 30px;
+    box-sizing: border-box;
+  }
+  .details{
+    padding-right: 170px;
+  }
+  .item_title{
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 32px;
+  }
+  .item_prompt{
+    color: #1a81fd;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .details_desc{
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+  .details_list{
+    margin-top: 30px;
+    .details_list_item{
+      margin-top: 20px;
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    .fa,.far,.fas{
+      width: 24px; //fa圖片寬度不一樣啊= =
+      color: rgb(37,235,255);
+      font-size: 24px;
+    }
+    .details_list_text{
+      margin-left: 30px;
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+  .contact_field{
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    font-size: 14px;
+    font-weight: 300;
+    &#user_message{
+      padding-bottom: 0;
+      height: 100px;
+      position: relative;
+    }
+    // 相容性問題
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #fff;
+      opacity: 1; /* Firefox */
+    }
+    
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #fff;
+    }
+    
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: #fff;
+    }
+  }
+  .message_button{
+    margin-top: 50px;
+    display: block;
+    border: none;
+    color: #fff;
+    background-color: #1a81fd;
+    padding: 18px 34px 16px 34px;
+    border-radius: 30px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  &::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.container{
+  width: 1200px;
+  margin: auto;
+}

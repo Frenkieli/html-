@@ -1,0 +1,92 @@
+body {
+  padding: 30px;
+  font-family: "Montserrat", Sans-serif;
+}
+
+.sell_card {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 340px;
+  padding: 150px 30px 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  color: #fff;
+  background-color: #5928DC;
+}
+
+.sell_card .sell_tab {
+  position: absolute;
+  right: -27px;
+  top: 15px;
+  background-color: #1A81FD;
+  width: 100px;
+  padding: 4px 0;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.sell_card .item {
+  text-align: center;
+}
+
+.sell_card .sell_title {
+  letter-spacing: 3px;
+}
+
+.sell_card .sell_img_box {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+}
+
+.sell_card .sell_img_box .fas {
+  font-size: 60px;
+}
+
+.sell_card .sell_cost_box {
+  margin-top: 20px;
+}
+
+.sell_card .sell_cost_box .sell_cost_symbol {
+  line-height: 30px;
+  vertical-align: top;
+}
+
+.sell_card .sell_cost_box .sell_cost_number {
+  font-size: 50px;
+}
+
+.sell_card .sell_desc_box {
+  margin-top: 20px;
+}
+
+.sell_card .sell_desc_box .sell_desc {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 26px;
+}
+
+.sell_card .sell_button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px 50px;
+  border: 1px solid #fff;
+  outline: none;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.sell_card .sell_button:hover {
+  color: #5928DC;
+  background-color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
